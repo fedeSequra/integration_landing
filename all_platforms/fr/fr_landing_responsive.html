@@ -1,0 +1,435 @@
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;200;400;600;800&family=Poppins:wght@100;200;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;200;400;600;800&family=Poppins:wght@100;200;400;600;800&display=swap');
+
+:root {
+    --color-text: #000;
+    --color-secondary-text: #8d8d8d;
+    --color-primary: #21cfac;
+    --color-background: #f4f4f4;
+    --font-weight-light: 100;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-family-poppins: 'Poppins', sans-serif;
+    --font-family-opensans: 'Open Sans', sans-serif;
+    --font-size-p: 19px;
+    --font-size-h1: 32px;
+    --font-size-h2: 46px;
+    --font-size-h3: 18px;
+    --font-size-h4: 16px;
+    --font-size-h5: 26px;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+body {
+    font-family: var(--font-family-poppins);
+}
+
+p {
+    color: var(--color-text);
+    font-family: var(--font-family-opensans);
+    font-weight: var(--font-weight-light);
+    font-size: var(--font-size-p);
+    line-height: 1.5;
+}
+
+h2 {
+    font-family: var(--font-family-poppins);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-h2);
+    line-height: 1.2;
+    color: #333;
+}
+
+h3 {
+    font-family: var(--font-family-poppins);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-h3);
+    color: var(--color-secondary-text);
+}
+
+h5 {
+    font-weight: var(--font-weight-regular);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-h5);
+    color: var(--color-secondary-text);
+    margin: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    border: 0 !important;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.responsive-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 40px;
+    background-color: var(--color-background);
+}
+
+@media (max-width: 700px) {
+    .responsive-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.padding-vertical {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.padding-vertical--large {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.margin-bottom {
+    margin-bottom: 30px;
+}
+
+.margin-bottom--medium {
+    margin-bottom: 30px;
+}
+
+.hero {
+    display: flex;
+}
+
+.hero__content {
+    padding: 30px;
+    text-align: center;
+}
+
+.hero__logo {
+    width: 150px;
+    margin: 30px auto;
+}
+
+.hero__title-highlighted {
+    color: var(--color-primary);
+}
+
+.hero__subtitle {
+    padding: 20px;
+}
+
+.hero__image-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end
+}
+
+.hero__image {
+    max-width: 300px !important;
+    margin: 0 !important;
+    object-fit: contain;
+}
+
+@media (max-width: 700px) {
+    .hero__image {
+        max-width: 60%;
+    }
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    
+}
+
+@media (max-width: 700px) {
+    .steps {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    justify-content: left;
+    }
+}
+
+.steps-text {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    
+}
+
+@media (max-width: 700px) {
+    .steps-text {
+    justify-content: left;
+    flex-direction: column;
+    }
+}
+
+.steps__item {
+    width: 33.33%;
+    box-sizing: border-box;
+    border-radius: 40px;
+    padding: 40px;
+    text-align: center;
+    background-color: var(--color-background);
+    overflow: hidden;
+}
+
+@media (max-width: 700px) {
+    .steps__item {
+        width: 100%;
+        min-width: 250px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    }
+}
+
+.steps__item-text {
+    width: 33.33%;
+    box-sizing: border-box;
+    border-radius: 40px;
+    padding: 40px;
+    text-align: left;
+
+    h5{
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .steps__item-text {
+        width: 100%;
+        min-width: 250px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    }
+}
+
+.steps__image {
+    max-height: 134px;
+    margin-top: 20px;
+}
+
+.steps__title {
+    color: #555;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-family: 'Open Sans';
+    font-weight: 600;
+}
+
+.why-sequra .steps__item {
+    background-color: #fff;
+    text-align: left;
+}
+
+.why-sequra .steps__item h5 {
+    padding: 15px 0;
+    color: var(--color-text);
+}
+
+.why-sequra .steps__item p {
+    color: var(--color-secondary-text);
+}
+
+.why-sequra .steps__item img {
+    max-width: 60px;
+    height: auto;
+}
+
+.trust {
+    border-radius: 30px;
+    background-color: var(--color-background);
+    margin: 80px 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    text-align: center;
+    min-height: 100px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+@media (max-width: 700px) {
+    .trust {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.trust__box h5 {
+    margin: 0;
+    padding: 0;
+    font-size: var(--font-size-h5);
+}
+
+.trust__box .highlighted {
+    color: var(--color-primary);
+}
+
+.trust__logo {
+    max-width: 250px;
+    height: auto;
+}
+
+.faq {
+    padding: 50px;
+    text-align: center;
+}
+
+.faq__title {
+    font-weight: 300;
+    padding: 20px;
+}
+
+.faq__link {
+    font-family: var(--font-family-poppins);
+    font-size: 18px;
+    max-width: 400px;
+    color: var(--color-text);
+    padding: 15px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    background-color: var(--color-primary);
+    display: inline-block;
+}
+
+.com_banner{
+    display: flex;
+    padding: 20px;
+    margin-top: 60px;
+    justify-content: center;
+    text-align: center;
+    background-image: linear-gradient(90deg, #21cfac, #01aed5);
+    border-radius: .8rem;
+    font-family: var(--font-family-opensans);
+    p {
+        color: white;
+    }
+}
+
+.svea_banner{
+    background-color: #21cfac;
+    border-radius: 1rem;
+    padding: 2rem 3rem 2rem 2rem;
+    p{
+        color: white;
+        padding: 20px 0;
+    }
+}
+    </style>
+    <div class="container">
+        <div class="responsive-grid">
+            <div class="hero__content">
+                <img src="https://live.sequracdn.com/assets/images/logos/logo.png" alt="seQura Logo" class="hero__logo" />
+                <h3 class="hero__subtitle">Bénéficiez d’une flexibilité totale</h3>
+
+                <div>
+                    <h2 style="margin: 0; line-height: 1;">Payez à votre rythme</h2>
+                    <h2 style="margin: 0; line-height: 1.2;" class="hero__title-highlighted">de 3 à 12 mois</h2>
+                    <h3 class="hero__subtitle">Choisissez seQura lors du paiement et répartissez<br>vos achats comme vous le souhaitez</h3>
+                </div>
+            </div>
+            <div class="hero__image-container">
+                <img
+                    src="https://cdn.prod.website-files.com/660bca16836e5f6467add994/67bf5d096eb894f74c626624_Pantalla%20Movil_FR.png"
+                    alt="seQura" class="hero__image" />
+            </div>
+        </div>
+
+        <div class="com_banner">
+            <p>Avez-vous besoin d'aide pour finaliser votre achat ? Contactez-nous à 0805988070 </p>
+        </div>
+
+        <div class="text-center padding-vertical padding-vertical--large">
+            <h5>Acheter en toute confiance
+            </h5>
+            <h2 class="margin-bottom margin-bottom--medium">Comment fonctionne le paiement échelonné ? </h2>
+
+            <div class="steps">
+                <div class="steps__item">
+                    <p class="steps__title">Sélectionnez <b>« seQura »</b>  comme mode de paiement lorsque vous traitez votre commande.</p>
+                    <img
+                        src="https://cdn.prod.website-files.com/67af44c7202dd7f6d7cec826/67af44c7202dd7f6d7cec8a4_sq-lpint-selection.png"
+                        class="steps__image" alt="Selecciona seQura" />
+                </div>
+                <div class="steps__item">
+                    <p class="steps__title"><b>Choisissez comment vous souhaitez payer</b>, de 3 à 12 mois. Ce qui vous convient le mieux !</p>
+                    <img
+                        src="https://cdn.prod.website-files.com/67af44c7202dd7f6d7cec826/67af44c7202dd7f6d7cec8a2_sq-lpint-time.png"
+                        class="steps__image" alt="Fracciona el pago" />
+                </div>
+                <div class="steps__item">
+                    <p class="steps__title">Entrez vos coordonnées, ajoutez votre carte et munissez-vous de votre carte d'identité ou titre de séjour. <b>Profitez-en aujourd'hui et payez à votre rythme.</b></p>
+                    <img
+                        src="https://cdn.prod.website-files.com/67af44c7202dd7f6d7cec826/67af44c7202dd7f6d7cec8a3_sq-lpint-cards.png"
+                        class="steps__image" alt="Sin papeleos" />
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center padding-vertical padding-vertical--large why-sequra">
+            <h2 class="margin-bottom margin-bottom--medium">Pourquoi payer avec seQura</h2>
+            <div class="steps-text">
+                <div class="steps__item-text">
+                    <img
+                        src="https://cdn.prod.website-files.com/62b803c519da726951bd71c2/680a43f542d9e2348937aa4f_icon_sinsorpresas.png" alt="Sin sorpresas" />
+                    <h5>Sans surprises</h5>
+                    <p>Que vous payiez en 3 ou 12 mois, nos tarifs sont clairs pour que vous puissiez acheter en toute sérénité. </p>
+                </div>
+                <div class="steps__item-text">
+                    <img
+                        src="https://cdn.prod.website-files.com/62b803c519da726951bd71c2/680a43f551b83554148aa90e_icon_sin_esperas.png" alt="Sin esperas" />
+                    <h5>Pas d'attente</h5>
+                    <p>Nous savons que votre temps est important, c'est pourquoi faire vos achats avec nous est un processus confortable, simple et instantané. </p>
+                </div>
+                <div class="steps__item-text">
+                    <img
+                        src="https://cdn.prod.website-files.com/62b803c519da726951bd71c2/680a43f55d8e9fcad5e39257_icon_con_seguridad.png" alt="Con seguridad" />
+                    <h5>Sans risque</h5>
+                    <p>Tus datos están protegidos. Solo tienes que introducirlos una vez.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="trust">
+            <div class="trust__box">
+                <h5>Plus que                </h5>
+                <h5 class="highlighted">2 millions de clients</h5>
+            </div>
+            <div><img src="https://cdn.prod.website-files.com/67af44c7202dd7f6d7cec826/67af44c7202dd7f6d7cec8a5_67951f322556a4d7685a8b60_sq-trustpilot-avatars.png" class="trust__logo" alt="Avatares Trustpilot"></div>
+            <div><img src="https://cdn.prod.website-files.com/67af44c7202dd7f6d7cec826/67af44c7202dd7f6d7cec8a6_67951fb13a1878801083d4df_sq-trustpilot-logo.png" class="trust__logo" alt="Logo Trustpilot"></div>
+        </div>
+
+        <div class="svea_banner">
+            <h2>Qu'est-ce que SeQura par SVEA ?</h2>
+            <p>Toutes les opérations sont financées par SVEA Bank AB, une institution financière d'origine suédoise présente dans plusieurs pays européens depuis plus de 40 ans.
+                SeQura, leader du paiement flexible en Europe du Sud, offre tout le support technologique pour rendre votre processus et votre expérience d'achat aussi rapides, simples et sécurisés que possible.
+                C’est pourquoi les deux marques apparaissent à des étapes différentes du processus d’achat.</p>
+        </div>
+
+        <div class="text-center faq">
+            <h2 class="faq__title">Des questions ?</h2>
+            <a href="https://www.sequra.com/fr/faq#shoppers" target="_blank" class="faq__link">
+                Vous avez des questions ? | FAQ
+            </a>
+        </div>
+    </div>
